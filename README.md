@@ -12,9 +12,6 @@ A) Introduction
 B) On the to-do list
 C) Original documentation for this assignment project
 
-_,.-~^*'`'*^~-.,_,.-~^*'`'*^~-.,_,.-~^*'`'*^~-.,_,.-~^*'`'*^~-.,_
-`'*^~-.,_,.-~^*'`'*^~-.,_,.-~^*'`'*^~-.,_,.-~^*'`'*^~-.,_,.-~^*'`
-
 ===============
 A) Introduction
 ===============
@@ -35,34 +32,32 @@ A) Introduction
 5. CONTRIBUTIONS
     * So far, just me!
 
-_,.-~^*'`'*^~-.,_,.-~^*'`'*^~-.,_,.-~^*'`'*^~-.,_,.-~^*'`'*^~-.,_
-`'*^~-.,_,.-~^*'`'*^~-.,_,.-~^*'`'*^~-.,_,.-~^*'`'*^~-.,_,.-~^*'`
-
 ====================
 B) On the to-do list
 ====================
 
 Basic goals:
-    Need to have a library of buttons up top populating based on an input and submit (array of animals, loop through to make buttons)
-    The buttons need to pull a group of 10 gifs from the giphy api and prepend them to the page (not overwrite). The gifs need to be clickable, so they start as a freeze image and "play" when clicked, then "pause" again when clicking another time.
-    Look at giphy parameters: q, limit, rating
-    Giphy api key for Adam: xyrnqWXfU1VtQMLv35efwBKSnFDbth66
-    Use the HTTPS protocol in the query URL, as that's the best way to guarantee it'll work reliably in Github Pages.
-    Submit github repo, github pages, and add to portfolio.
+- [ ] Need to have a library of buttons up top populating based on an input and submit (array of animals, loop through to make buttons)
+- [ ] The buttons need to pull a group of 10 gifs from the giphy api and prepend them to the page (not overwrite). The gifs need to be clickable, so they start as a freeze image and "play" when clicked, then "pause" again when clicking another time.
+- [ ] Look at giphy parameters: q, limit, rating
+- [ ] Giphy api key for Adam: xyrnqWXfU1VtQMLv35efwBKSnFDbth66
+- [ ] Use the HTTPS protocol in the query URL, as that's the best way to guarantee it'll work reliably in Github Pages.
+- [ ] Submit github repo, github pages, and add to portfolio.
     
 Bonus goals:
-    Each gif should have a download button that works for any device type.
-    Mobile-responsiveness
-    Additional APIs like OMDB or Bands In Town.
-    Add a favorites section for users that persists even when a new topic is selected.
-        Added challenge - save via localStorage or cookies so favorites persist even on page reload.
+- [ ] Each gif should have a download button that works for any device type.
+- [ ] Mobile-responsiveness
+- [ ] Additional APIs like OMDB or Bands In Town.
+- [ ] Add a favorites section for users that persists even when a new topic is selected.
+    - [ ] Added challenge - save via localStorage or cookies so favorites persist even on page reload.
 
-_,.-~^*'`'*^~-.,_,.-~^*'`'*^~-.,_,.-~^*'`'*^~-.,_,.-~^*'`'*^~-.,_
-`'*^~-.,_,.-~^*'`'*^~-.,_,.-~^*'`'*^~-.,_,.-~^*'`'*^~-.,_,.-~^*'`
 
 =====================================================
 C) Original documentation for this assignment project
 =====================================================
+
+_,.-~^*'`'*^~-.,_,.-~^*'`'*^~-.,_,.-~^*'`'*^~-.,_,.-~^*'`'*^~-.,_
+`'*^~-.,_,.-~^*'`'*^~-.,_,.-~^*'`'*^~-.,_,.-~^*'`'*^~-.,_,.-~^*'`
 
 ### Overview
 
