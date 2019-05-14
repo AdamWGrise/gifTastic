@@ -1,12 +1,8 @@
 var buttonSet = [];
 var instInput = "";
-var queryURL = "";
 
-var submission = function () {
-    instInput = $("#instrumentInput").val().trim();
-    queryURL = "https://api.giphy.com/v1/gifs/search?q=" + instInput + "&api_key=xyrnqWXfU1VtQMLv35efwBKSnFDbth66&limit=10"
-
-    console.log(instInput);
+var submission = function (input) {
+    var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + input + "&api_key=xyrnqWXfU1VtQMLv35efwBKSnFDbth66&limit=10"
     $.ajax({
         url: queryURL,
         method: "GET"
@@ -15,15 +11,26 @@ var submission = function () {
     });
 };
 
-$("#submitButton").click(function (input) {
+var buttonAdd = function (submitInput) {
+    var newButton = $("<button>").attr('value',submitInput);
+    newButton.attr('class','queryButton');
+    newButton.text(submitInput);
+    $("#buttonList").append(newButton);
+    $(".queryButton").click(function(){
+        var keyword = $(this).attr('value');
+        submission(keyword);
+    });
+}
+
+$("#submitButton").click(function (submitInput) {
     event.preventDefault();
-    input = $("#instrumentInput").val().trim();
-    if (input === '') {
+    submitInput = $("#instrumentInput").val().trim();
+    if (submitInput === '') {
         $("#errorMsg").html("<h6>Enter an instrument before clicking 'Add'!</h6>");
     } else {
         $("#errorMsg").html("");
-        submission();
+        buttonAdd(submitInput);
         $("#instrumentInput").val("");
-        input = '';
+        submitInput = '';
     }
 });

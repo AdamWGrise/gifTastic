@@ -1,14 +1,14 @@
-.buttonList {
+#buttonList {
     background-color:green;
     height:100px;
 }
 
-.gifDisplay {
+#gifDisplay {
     background-color:yellow;
     height:100px;
 }
 
-.searchArea {
+#searchArea {
     background-color:blue;
     height:100px;
 }
