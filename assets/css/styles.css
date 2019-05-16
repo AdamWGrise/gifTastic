@@ -1,14 +1,26 @@
-#buttonList {
-    background-color:green;
-    height:100px;
+.queryButton {
+    margin:5px;
 }
 
-#gifDisplay {
-    background-color:yellow;
-    height:100px;
+.gifImg {
+    margin:2px;
+    border:black 1px solid;
+}
+
+#buttonList {
+    background-color:#eee;
+    border-bottom:1px solid #aaa;
+    margin-bottom:5px;
+    min-height:50px;
+}
+
+#submitButton {
+    margin-top:10px;
 }
 
 #searchArea {
-    background-color:blue;
-    height:100px;
+    background-color:#aca;
+    padding:3px;
+    border:1px solid #aaa;
+    text-align:center;
 }
