@@ -1,7 +1,10 @@
 var buttonSet = [];
+var topics = ['saxophone','electric guitar','trombone','violin','drum set'];
 var instInput = "";
 var qtyInput = 10;
 var apiKey = 'xyrnqWXfU1VtQMLv35efwBKSnFDbth66';
+
+///// GET & DISPLAY GIFS, APPLY ON-CLICK STATE CHANGE /////
 
 var submission = function (input) {
     var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + input + "&api_key=" + apiKey + "&limit=10"
@@ -11,22 +14,22 @@ var submission = function (input) {
     }).then(function (response) {
         console.log(response);
         for (i = 0; i < 10; i++) {
+            var r = response.data[i].images;
             var newGif = $("<img>");
-            newGif.attr('src', response.data[i].images.fixed_height_still.url);
-            newGif.attr('class', 'gifImg');
-            newGif.attr('data-still', response.data[i].images.fixed_height_still.url);
-            newGif.attr('data-animate', response.data[i].images.fixed_height.url);
-            newGif.attr('data-state','still');
+            newGif.attr({
+                'class':'gifImg',
+                src:r.fixed_height_still.url,
+                'data-still':r.fixed_height_still.url,
+                'data-animate':r.fixed_height.url,
+                'data-state':'still',
+            });
             $("#gifDisplay").prepend(newGif);
             newGif.click(function () {
-                console.log('click');
                 var state = $(this).attr('data-state');
                 if (state === 'still') {
-                    console.log('still click');
                     $(this).attr('data-state','animate');
                     $(this).attr('src', $(this).attr('data-animate'));
                 } else if (state === 'animate') {
-                    console.log('animate click');
                     $(this).attr('data-state','still');
                     $(this).attr('src', $(this).attr('data-still'));
                 };
@@ -60,5 +63,13 @@ $("#submitButton").click(function (submitInput) {
         buttonAdd(submitInput);
         $("#instrumentInput").val("");
         submitInput = '';
+    };
+});
+
+///////// ON PAGE LOAD //////////
+
+$(document).ready(function(){
+    for (i = 0 ; i < topics.length ; i++) {
+        buttonAdd(topics[i]);
     };
 });

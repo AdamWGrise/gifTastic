@@ -1,8 +1,6 @@
 gifTastic: A Giphy quick query tool
 
-========
-CONTENTS
-========
+## CONTENTS
 A) Introduction
     - What is this?
     - Why?
@@ -12,9 +10,7 @@ A) Introduction
 B) On the to-do list
 C) Original documentation for this assignment project
 
-===============
-A) Introduction
-===============
+## A) Introduction
 
 1. WHAT IS THIS?
     * This gifTastic page allows users to search for and quickly display gifs on the screen based on entered topics.
@@ -32,14 +28,12 @@ A) Introduction
 5. CONTRIBUTIONS
     * So far, just me!
 
-====================
-B) On the to-do list
-====================
+## B) On the to-do list
 
 Basic goals:
 - [x] Need to have a library of buttons up top populating based on an input and submit (array of animals, loop through to make buttons)
 - [x] The buttons need to pull a group of 10 gifs from the giphy api and prepend them to the page (not overwrite).
-- [ ] The gifs need to be clickable, so they start as a freeze image and "play" when clicked, then "pause" again when clicking another time.
+- [x] The gifs need to be clickable, so they start as a freeze image and "play" when clicked, then "pause" again when clicking another time.
 - [ ] Look at giphy parameters: q, limit, rating
 - [ ] Look at YouTube links from Haydn:
         https://www.youtube.com/watch?v=Kp7Xy2LScLM
@@ -58,9 +52,7 @@ Bonus goals:
     - [ ] Added challenge - save via localStorage or cookies so favorites persist even on page reload.
 
 
-=====================================================
-C) Original documentation for this assignment project
-=====================================================
+## C) Original documentation for this assignment project
 
 _,.-~^*'`'*^~-.,_,.-~^*'`'*^~-.,_,.-~^*'`'*^~-.,_,.-~^*'`'*^~-.,_
 `'*^~-.,_,.-~^*'`'*^~-.,_,.-~^*'`'*^~-.,_,.-~^*'`'*^~-.,_,.-~^*'`
