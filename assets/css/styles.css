@@ -1,9 +1,13 @@
+body {
+    background-color:#444;
+}
+
 .queryButton {
     margin:5px;
 }
 
 .gifImg {
-    margin:2px;
+    margin: 4px 0 0 0;
     border:black 1px solid;
 }
 
