@@ -12,19 +12,23 @@ var submission = function (input) {
         console.log(response);
         for (i = 0; i < 10; i++) {
             var newGif = $("<img>");
-            var isStill = true;
             newGif.attr('src', response.data[i].images.fixed_height_still.url);
             newGif.attr('class', 'gifImg');
             newGif.attr('data-still', response.data[i].images.fixed_height_still.url);
             newGif.attr('data-animate', response.data[i].images.fixed_height.url);
+            newGif.attr('data-state','still');
             $("#gifDisplay").prepend(newGif);
-            $(this).click(function () {
-                if (isStill === true) {
-                    isStill = false;
-                    newGif.attr('data-animate');
-                } else if (isStill === false) {
-                    isStill = true;
-                    newGif.attr('data-still');
+            newGif.click(function () {
+                console.log('click');
+                var state = $(this).attr('data-state');
+                if (state === 'still') {
+                    console.log('still click');
+                    $(this).attr('data-state','animate');
+                    $(this).attr('src', $(this).attr('data-animate'));
+                } else if (state === 'animate') {
+                    console.log('animate click');
+                    $(this).attr('data-state','still');
+                    $(this).attr('src', $(this).attr('data-still'));
                 };
             });
         };
