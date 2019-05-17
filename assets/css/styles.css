@@ -1,3 +1,5 @@
+/* https://coolors.co/f2d7ee-d3bcc0-a5668b-69306d-0e103d */
+
 body {
     margin-top: 15px;
     background-color:#0E103D;
@@ -48,7 +50,7 @@ body {
 
 #buttonList {
     background: linear-gradient(90deg, #69306D 0%, #A5668B 60%, #D3BCC0 100%);
-    border: 1px solid #aaa;
+    border: 1px solid #f2d7ee;
     margin: 5px 0 15px;
     min-height: 50px;
 }
@@ -62,11 +64,11 @@ body {
     background-color: #69306D;
     color: #fff;
     padding: 3px;
-    border: 1px solid #aaa;
+    border: 1px solid #f2d7ee;
     text-align: center;
     margin-bottom: 10px;
 }
 
 #ratingsKey {
-    color: #aaa;
+    color: #bbb;
 }

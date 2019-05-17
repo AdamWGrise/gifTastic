@@ -26,7 +26,6 @@ var submission = function (input) {
                 'title': r.title,
             });
 
-
             $("#gifDisplay").prepend(gifBox);
 
             gifBox.append(newGif);
@@ -42,6 +41,16 @@ var submission = function (input) {
             var newTitle = getTitle(r.title);
 
             newGif.after("<div class='gifTitle' style='width:" + (newWidth) + "px'> " + newRating.toUpperCase() + "  |  " + newTitle + "</div>");
+
+
+            // Trying to get the download button to work, not much success right now. https://nehalist.io/downloading-files-from-post-requests/
+            var gifDownload = $("<button>.").text("Download");
+            gifDownload.attr({
+                'href': r.images.fixed_height.url,
+                'title': r.images.fixed_height.url,
+            });
+            newGif.after(gifDownload);
+            /////////////////////////////////////
 
             newGif.unbind().click(function () {
                 var state = $(this).attr('data-state');
