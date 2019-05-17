@@ -1,8 +1,6 @@
-var buttonSet = [];
-var topics = ['saxophone', 'electric guitar', 'trombone', 'violin', 'drum set'];
-var instInput = "";
-var qtyInput = 10;
-var apiKey = 'xyrnqWXfU1VtQMLv35efwBKSnFDbth66';
+var buttonSet = []; // The array of values generating the buttons.
+var topics = ['Saxophone', 'Electric guitar', 'Trombone', 'Violin', 'Drum set']; // Some initial values to stick in the buttonSet array, which happens on page load.
+var apiKey = 'xyrnqWXfU1VtQMLv35efwBKSnFDbth66'; // Adam's API key for Giphy dev.
 
 ///// GET & DISPLAY GIFS, APPLY ON-CLICK STATE CHANGE /////
 
@@ -14,32 +12,37 @@ var submission = function (input) {
     }).then(function (response) {
         console.log(response);
         for (i = 0; i < 10; i++) {
-            var newRating = response.data[i].rating;
-            var r = response.data[i].images;
+            var gifBox = $('<div>');
+            gifBox.attr('class', 'gifBox');
+            var r = response.data[i];
+            var newRating = r.rating;
             var newGif = $("<img>");
             newGif.attr({
                 'class': 'gifImg',
-                src: r.fixed_height_still.url,
-                'data-still': r.fixed_height_still.url,
-                'data-animate': r.fixed_height.url,
+                src: r.images.fixed_height_still.url,
+                'data-still': r.images.fixed_height_still.url,
+                'data-animate': r.images.fixed_height.url,
                 'data-state': 'still',
+                'title': r.title,
             });
 
-            var gifBox = $('<span>');
-            gifBox.attr('class','gifBox');
-            
-            //$("#gifDisplay").prepend(newGif);
+
             $("#gifDisplay").prepend(gifBox);
 
             gifBox.append(newGif);
 
-            var newWidth = parseInt(r.fixed_height_still.width)+2;
-            var newTitle = response.data[i].title;
+            var newWidth = parseInt(r.images.fixed_height_still.width) + 2;
+            var getTitle = function (input) {
+                if (input === '') {
+                    return '(No Title)';
+                } else {
+                    return input;
+                };
+            };
+            var newTitle = getTitle(r.title);
 
-            newGif.after("<div class='gifTitle' style='width:" + (newWidth) + "px'> Rated " + newRating + " | '" + newTitle + "'</div>");
+            newGif.after("<div class='gifTitle' style='width:" + (newWidth) + "px'> " + newRating.toUpperCase() + "  |  " + newTitle + "</div>");
 
-
-            // $("#gifDisplay").prepend("<span>Rated " + newRating + ":</span>");
             newGif.unbind().click(function () {
                 var state = $(this).attr('data-state');
                 if (state === 'still') {
@@ -54,7 +57,7 @@ var submission = function (input) {
     });
 };
 
-////// BUTTON ADD + THEIR OWN EVENT LISTENER //////
+////// ADD BUTTON ALONG WITH ITS OWN EVENT LISTENER //////
 
 var buttonAdd = function (submitInput) {
     var newButton = $("<button>").attr('value', submitInput);
@@ -67,7 +70,7 @@ var buttonAdd = function (submitInput) {
     });
 }
 
-/////////// LISTENER /////////////
+/////////// INITIAL SUBMISSION LISTENER /////////////
 
 $("#submitButton").unbind().click(function (submitInput) {
     event.preventDefault();

@@ -10,6 +10,8 @@
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Maiden+Orange|Source+Code+Pro&display=swap" rel="stylesheet">
     <!-- Local CSS -->
     <link rel="stylesheet" href="assets/css/styles.css">
     <!-- jQuery library -->
@@ -21,7 +23,7 @@
         <div class="row">
             <div class="col-lg-12">
                 <div class="headerStuff">
-                    <h4>Instrument GIF Party</h4>
+                    <h1>Instrumental GIF Party!</h1>
                 </div>
             </div>
         </div>
@@ -34,13 +36,32 @@
         </div>
         <div class="row">
             <div class="col-lg-3 order-lg-2">
-                <div id="searchArea">
-                    <form id="userInput">
-                        <label for="instrumentInput">Add an instrument!</label>
-                        <input type="text" id="instrumentInput"><br>
-                        <input id="submitButton" class="btn btn-success" type="submit" value="Add">
-                    </form>
-                    <p id="errorMsg"></p>
+                <div class="row">
+                    <div class="col">
+                        <div id="searchArea">
+                            <form id="userInput">
+                                <label for="instrumentInput">Add your own instruments!</label>
+                                <input type="text" id="instrumentInput"><br>
+                                <input id="submitButton" class="btn btn-success" type="submit" value="Add!">
+                            </form>
+                            <p id="errorMsg"></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <div id='ratingsKey'>
+                            <h3>GIF Rating Key (similar to MPAA):</h3>
+                            <ul>
+                                <li>Y = Illustrated content</li>
+                                <li>G = General audiences (all ages)</li>
+                                <li>PG = Parental guidance suggested</li>
+                                <li>PG-13 = Parents strongly cautioned</li>
+                                <li>R = Restricted (some adult material)</li>
+                                <li>NC-17 = Adults only</li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="col-lg-9 order-lg-1">
