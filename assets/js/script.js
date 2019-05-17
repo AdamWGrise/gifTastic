@@ -61,7 +61,7 @@ var submission = function (input) {
 
 var buttonAdd = function (submitInput) {
     var newButton = $("<button>").attr('value', submitInput);
-    newButton.attr('class', 'btn btn-secondary queryButton')
+    newButton.attr('class', 'btn btn-secondary queryButton abtn')
     newButton.text(submitInput);
     $("#buttonList").append(newButton);
     $(".queryButton").unbind().click(function () {
