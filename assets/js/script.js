@@ -24,12 +24,19 @@ var submission = function (input) {
                 'data-animate': r.fixed_height.url,
                 'data-state': 'still',
             });
-            $("#gifDisplay").prepend(newGif);
+
+            var gifBox = $('<span>');
+            gifBox.attr('class','gifBox');
+            
+            //$("#gifDisplay").prepend(newGif);
+            $("#gifDisplay").prepend(gifBox);
+
+            gifBox.append(newGif);
+
             var newWidth = parseInt(r.fixed_height_still.width)+2;
             var newTitle = response.data[i].title;
-            console.log(newWidth);
 
-            newGif.after("<div style='background: rgba(0,0,0,0.5);color:white;width:" + (newWidth) + "px'>Rated " + newRating + " | '" + newTitle + "'</div>");
+            newGif.after("<div class='gifTitle' style='width:" + (newWidth) + "px'> Rated " + newRating + " | '" + newTitle + "'</div>");
 
 
             // $("#gifDisplay").prepend("<span>Rated " + newRating + ":</span>");

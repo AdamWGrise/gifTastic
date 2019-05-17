@@ -34,7 +34,7 @@ Basic goals:
 - [x] Need to have a library of buttons up top populating based on an input and submit (array of animals, loop through to make buttons)
 - [x] The buttons need to pull a group of 10 gifs from the giphy api and prepend them to the page (not overwrite).
 - [x] The gifs need to be clickable, so they start as a freeze image and "play" when clicked, then "pause" again when clicking another time.
-- [ ] Look at giphy parameters: q, limit, rating
+- [x] Look at giphy parameters: q, limit, rating
 - [ ] Look at YouTube links from Haydn:
         https://www.youtube.com/watch?v=Kp7Xy2LScLM
         https://www.youtube.com/watch?v=K1JDUkF94cs
@@ -46,7 +46,7 @@ Basic goals:
     
 Bonus goals:
 - [ ] Each gif should have a download button that works for any device type.
-- [ ] Mobile-responsiveness
+- [x] Mobile-responsiveness
 - [ ] Additional APIs like OMDB or Bands In Town.
 - [ ] Add a favorites section for users that persists even when a new topic is selected.
     - [ ] Added challenge - save via localStorage or cookies so favorites persist even on page reload.
