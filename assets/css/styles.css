@@ -38,6 +38,10 @@ body {
     text-overflow: ellipsis;
 }
 
+.gifTitleLink {
+    color:#a5668b;
+}
+
 .gifBox {
     display: inline-block;
     margin-right: 8px;

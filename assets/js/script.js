@@ -38,18 +38,26 @@ var submission = function (input) {
                     return input;
                 };
             };
-            var newTitle = getTitle(r.title);
 
-            newGif.after("<div class='gifTitle' style='width:" + (newWidth) + "px'> " + newRating.toUpperCase() + "  |  " + newTitle + "</div>");
+            var gifTitle = $("<div>")
+            gifTitle.attr({
+                'class':'gifTitle',
+                'style':'width:' + newWidth + 'px',
+            });
+            gifTitle.html(newRating.toUpperCase() + " | " + getTitle(r.title) + '<br>');
 
+            gifBox.append(gifTitle);
 
             // Trying to get the download button to work, not much success right now. https://nehalist.io/downloading-files-from-post-requests/
-            var gifDownload = $("<button>.").text("Download");
+            var gifDownload = $("<a>")
             gifDownload.attr({
-                'href': r.images.fixed_height.url,
+                'href': r.images.fixed_height.url, // Update this to get the substring!
                 'title': r.images.fixed_height.url,
+                'target':'_blank',
+                'class':'gifTitleLink'
             });
-            newGif.after(gifDownload);
+            gifDownload.text('Download!');
+            gifTitle.append(gifDownload);
             /////////////////////////////////////
 
             newGif.unbind().click(function () {
