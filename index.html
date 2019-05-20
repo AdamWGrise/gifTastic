@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>GIF Symphony</title>
+    <title>Gif Symphony! ...gifony?</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Reset CSS -->
@@ -22,8 +22,8 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-lg-12">
-                <div class="headerStuff">
-                    <h1>GIF Symphony</h1>
+                <div class="headerDiv">
+                    <h1>Instrumental GIF Party!</h1>
                 </div>
             </div>
         </div>
@@ -38,18 +38,21 @@
             <div class="col-lg-3 order-lg-2">
                 <div class="row">
                     <div class="col">
+                        <!-- The block for the search box that adds buttons -->
                         <div id="searchArea">
-                            <form id="userInput">
+                                <form id="userInput">
                                 <label for="instrumentInput">Add your own instruments! </label>
                                 <input type="text" id="instrumentInput"><br>
                                 <input id="submitButton" class="btn btn-secondary abtn" type="submit" value="Add!">
                             </form>
+                            <!-- Error message area -->
                             <p id="errorMsg"></p>
                         </div>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col">
+                        <!-- Ratings legend/key here -->
                         <div id='ratingsKey' class='d-none d-sm-none d-md-none d-lg-block'>
                             <h3>GIF Rating Key (similar to MPAA):</h3>
                             <ul>
@@ -64,6 +67,7 @@
                     </div>
                 </div>
             </div>
+            <!-- Gifs actually get displayed here; shows on left primarily but BootStrap classes put it under the search block on smaller screens. -->
             <div class="col-lg-9 order-lg-1">
                 <div id="gifDisplay">
                 </div>

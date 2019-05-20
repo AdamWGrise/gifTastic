@@ -7,12 +7,13 @@ body {
     font-size: 1.5rem;
 }
 
-.headerStuff {
+.headerDiv {
     text-align: center;
     color: #ddd;
     font-family: 'Source Code Pro';
 }
 
+/* Snips the title box for the gifs short when they overextend the width of the gif */
 .truncate {
     white-space: nowrap;
     overflow: hidden;
@@ -24,11 +25,13 @@ body {
     font-size: 1.3rem;
 }
 
+/* The pictures themselves */
 .gifImg {
     margin: 4px 0 0 0;
     border: black 1px solid;
 }
 
+/* The description of the gifs, including the rating */
 .gifTitle {
     background: rgba(0, 0, 0, 0.5);
     color: white;
@@ -38,15 +41,18 @@ body {
     text-overflow: ellipsis;
 }
 
+/* Just the download link */
 .gifTitleLink {
     color:#a5668b;
 }
 
+/* The whole title area for each gif, including the download link */
 .gifBox {
     display: inline-block;
     margin-right: 8px;
 }
 
+/* Individualized button styling */
 .abtn {
     border:2px solid #0E103D;
     background: linear-gradient(0deg, #333 0%, #777 100%);

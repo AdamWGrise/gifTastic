@@ -35,20 +35,20 @@ Basic goals:
 - [x] The buttons need to pull a group of 10 gifs from the giphy api and prepend them to the page (not overwrite).
 - [x] The gifs need to be clickable, so they start as a freeze image and "play" when clicked, then "pause" again when clicking another time.
 - [x] Look at giphy parameters: q, limit, rating
-- [ ] Look at YouTube links from Haydn:
+- [x] Look at YouTube links from Haydn:
         https://www.youtube.com/watch?v=Kp7Xy2LScLM
         https://www.youtube.com/watch?v=K1JDUkF94cs
         https://www.youtube.com/watch?v=UVBmX4cZkHY
         https://www.youtube.com/watch?v=PDD8NV3sbZo
 - [x] Giphy api key for Adam: xyrnqWXfU1VtQMLv35efwBKSnFDbth66
 - [x] Use the HTTPS protocol in the query URL, as that's the best way to guarantee it'll work reliably in Github Pages.
-- [ ] Submit github repo, github pages, and add to portfolio.
+- [x] Submit github repo, github pages, and add to portfolio.
     
 Bonus goals:
-- [ ] Each gif should have a download button that works for any device type.
+- [x] Each gif should have a download button that works for any device type.
 - [x] Mobile-responsiveness
-- [ ] Additional APIs like OMDB or Bands In Town.
-- [ ] Add a favorites section for users that persists even when a new topic is selected.
+- [ ] Additional APIs like OMDB or Bands In Town. (Did not complete)
+- [ ] Add a favorites section for users that persists even when a new topic is selected. (Did not complete)
     - [ ] Added challenge - save via localStorage or cookies so favorites persist even on page reload.
 
 
